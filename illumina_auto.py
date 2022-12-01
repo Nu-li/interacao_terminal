@@ -1,21 +1,22 @@
 import os, subprocess, sys
 
 
-pasta= input('insira o caminho:')
-print('entrando no loop')
-for diretorio, subpastas, arquivos in os.walk(pasta):
+pasta= input('insira o caminho:')#caminho completo até a pasta com os arquivos 
+#print('entrando no loop') aux na checagem
+for diretorio, subpastas, arquivos in os.walk(pasta):#caminha pelos arquivos
 	for arquivo in arquivos:
-		#print(os.path.join(diretorio, arquivo)) para checar se o caminho indicado está correto
+		#print(os.path.join(diretorio, arquivo)) -> para checar se o caminho indicado está correto
 		caminho = diretorio + arquivo
-		nome_base = os.path.basename(caminho)
+		nome_base = os.path.basename(caminho)#pega o nome base para quebrar e automatizar a nomeação dos arquivos de saída
 		quebra = nome_base.split('.')
 		nome = quebra[0]
-		saida = '/home/lab/Desktop/Dados/Layla/repeticao-art_illumina/saida_individuos_vs/' + nome + '_'
-		dados = '/home/lab/Desktop/Dados/Layla/art_illumina -ss HS25 -i ' + caminho + ' -p -l 150 -f 30 -m 450 -s 150 -na -o ' + saida
+		saida = 'caminho completo para a pasta de saída' + nome + '_' 
+		dados = 'caminho no computador para o art-illumina/art_illumina -ss HS25 -i ' + caminho + ' -p -l parâmetro -f parâmetro -m parâmetro -s parâmetro -na -o ' + saida
 		#print(dados) 
 		os.system(dados)				
 		#break
-
+		
+						#parâmetro: insira em sua lugar os parâmetros desejados na variável 'dados'
 		
 		
 		
