@@ -1,4 +1,4 @@
-import os, subprocess, sys
+import os, sys
 
 
 pasta= input('insira o caminho:')#caminho completo até a pasta com os arquivos 
