@@ -16,7 +16,7 @@ for diretorio, subpastas, arquivos in os.walk(pasta):#caminha pelos arquivos
 		os.system(dados)				
 		#break
 		
-						#parâmetro: insira em sua lugar os parâmetros desejados na variável 'dados'
+						#parâmetro: insira em seu lugar os parâmetros desejados na variável 'dados'
 		
 		
 		
